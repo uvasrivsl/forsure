@@ -1,10 +1,12 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from 'react';
+import MenuBars from './src/components/MenuBars';
 
-export default function App() {
+function App() {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
-  )
+    <>
+      <MenuBars />
+    </>
+  );
 }
+
+export default App;
