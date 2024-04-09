@@ -1,12 +1,22 @@
 import React from 'react';
-import MenuBars from './src/components/MenuBars';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import DrawerNavbar from './src/components/DrawerNavbar';
 
-function App() {
+const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <>
-      <MenuBars />
-    </>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="DrawerNavbar">
+        <Stack.Screen
+          name="DrawerNavbar"
+          component={DrawerNavbar}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
 export default App;
